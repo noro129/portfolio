@@ -1,0 +1,68 @@
+div{
+    overflow: hidden;
+    width: 98%;
+    height: 100%;
+    font-size: max( 60px , 10vw);
+    font-weight: 100;
+    background-color: #00000070;
+    color: var(--background-color2);
+    text-shadow: 0 0 2px var(--background-color2);
+    margin: 0 1%;
+    box-shadow: 0 0 10px #00000070;
+
+    .title{
+        width: 80%;
+        margin-top: 10vh;
+        display: inline-block;
+        padding-left: 5vw;
+        opacity: 0.8;
+    }
+
+    .subTitle{
+        color: var(--foreground-color1);
+        margin-top: 3vh;
+        display: block;
+        font-size: 30px;
+        margin-left: 10vw;
+        font-style: italic;
+        z-index: 3;
+    }
+
+    .letterP{
+        z-index: 1;
+        opacity: .8;
+        color: white;
+        font-size: larger;
+        font-family: sans-serif;
+        position: relative;
+        display: inline-block;
+        transform: translateX(80vw) rotateZ(45deg) translateY(-10vh) scale(2) scaleY(2) translateX(-5vw);
+        animation: anim1 10s infinite;
+
+        @keyframes anim1 {
+            0%{
+                transform: translateX(80vw) rotateZ(45deg) translateY(-10vh) scale(2) scaleY(2) translateX(-5vw);
+            }
+            50%{
+                transform: translateX(80vw) rotateZ(45deg) translateY(-10vh) scale(2) scaleY(2) translateX(-5vw) translateX(-20px) translateY(-10px);
+            }
+        }
+
+        &::after{
+            content: 'P';
+            color: var(--background-color2);
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+    }
+
+    .shadow{
+        transform: translateX(60vw) translateY(-5vh);
+        display: inline-block;
+        height: 0px;
+        width: 25%;
+        border-radius: 100%;
+        box-shadow: 0 0 50px 30px #00000090;
+    }
+}

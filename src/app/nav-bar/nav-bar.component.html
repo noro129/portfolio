@@ -1,0 +1,6 @@
+<nav>
+    <h1 (click)="SwitchNamePortfolio()" id="{{namePortfolio | titlecase}}">{{namePortfolio | titlecase}}</h1>
+    <ul class="navItems">
+        <li *ngFor="let navItem of navs">{{ navItem }}</li>
+    </ul>
+</nav>

@@ -1,0 +1,104 @@
+nav{
+    height: 10vh;
+    min-height: 60px;
+    width: 100vw;
+    background-color: var(--background-color1);
+    border-bottom: 5px solid var(--foreground-color1);
+    color: var(--foreground-color1);
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+
+    >*{
+        display: inline-block;
+    }
+
+    h1{
+        margin: 10px 0 0 20px;
+        font-size: 40px;
+        cursor: pointer;
+        position: relative;
+        &::after{
+            content: attr(id);
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            color: var(--foreground-color2);
+            opacity: 0.6;
+            transition: all .2s ease-in;
+        }
+
+        &:hover{
+            &::after{
+                transform: translate(-4px,-4px);
+            }
+        }
+    }
+
+    ul{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+
+        li{
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 100;
+            position: relative;
+            margin-left: 10px;
+            border: 2px solid var(--foreground-color1-light);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: none;
+            background: linear-gradient(45deg,var(--foreground-color1-light),#0d1b2aaa,
+                var(--background-color1-light),var(--background-color1-light),
+                var(--background-color1-light),var(--foreground-color1-light));
+
+            &::before{
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background-color: var(--background-color1);
+                top: 0;
+                left: 0;
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                z-index: -2;
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background-color: var(--foreground-color1);
+                top: 0px;
+                left: 0px;
+                transition: all .2s ease-in;
+            }
+            &:hover{
+                transform: rotate(3deg);
+                &::after{
+                    transform: translate(-8px,-8px);
+                }
+            }
+
+            &:last-child{
+                margin-right: 40px;
+            }
+        }
+    }
+}
