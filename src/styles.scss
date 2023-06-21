@@ -1,18 +1,33 @@
 :root{
-    --background-color1:#0d1b2a;
-    --background-color2:#768190;
-    --background-color12:#424E5D;
+    // --background-color1:#0d1b2a;
+    // --background-color2:#768190;
+    // --background-color12:#424E5D;
 
-    --background-color1-light:#0d1b2aa0;
-    --background-color2-light:#768190a0;
+    // --background-color1-light:#0d1b2aa0;
+    // --background-color2-light:#768190a0;
 
-    --foreground-color1:#cf5353;
-    --foreground-color2:#E8C547;
-    --foreground-color3:#778da9;
+    // --foreground-color1:#cf5353;
+    // --foreground-color2:#E8C547;
+    // --foreground-color3:#778da9;
 
-    --foreground-color1-light:#cf5353a0;
-    --foreground-color2-light:#E8C547a0;
-    --foreground-color3-light:#778da9a0;
+    // --foreground-color1-light:#cf5353a0;
+    // --foreground-color2-light:#E8C547a0;
+    // --foreground-color3-light:#778da9a0;
+    --background-color1: #000000;
+    --background-color2: #0a0a0a;
+    --background-color3: #111111;
+
+   --background-color1-light: #333333;
+    --background-color2-light: #444444;
+    --background-color3-light: #666666;
+
+    --foreground-color1: #00a3cc;
+    --foreground-color2: #d1495b;
+    --foreground-color3: #008ba3;
+
+    --foreground-color1-light: #00b5e0;
+    --foreground-color2-light: #e36678;
+    --foreground-color3-light: #0099aa;
 }
 
 body,html{
@@ -21,5 +36,5 @@ body,html{
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
-    background-color: var(--background-color12);
+    background-color: #eee;
 }

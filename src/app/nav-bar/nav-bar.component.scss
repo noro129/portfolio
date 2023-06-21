@@ -59,9 +59,9 @@ nav{
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom: none;
-            background: linear-gradient(45deg,var(--foreground-color1-light),#0d1b2aaa,
-                var(--background-color1-light),var(--background-color1-light),
-                var(--background-color1-light),var(--foreground-color1-light));
+            background: linear-gradient(45deg,var(--foreground-color1-light),
+                var(--background-color1),var(--background-color1),
+                var(--background-color1),var(--foreground-color1-light));
 
             &::before{
                 content: '';
@@ -99,6 +99,14 @@ nav{
             &:last-child{
                 margin-right: 40px;
             }
+        }
+    }
+}
+
+@media (width<=1090px){
+    nav{
+        ul{
+            display: none;
         }
     }
 }

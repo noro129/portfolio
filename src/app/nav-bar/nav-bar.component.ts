@@ -9,13 +9,16 @@ export class NavBarComponent {
 
   navs=['HOME','E & E','ABOUT','PROJECTS','CONTACT','CV'];
 
-  namePortfolio="portfolio";
+  p=1;
+  namePortfolio="my portfolio";
 
   SwitchNamePortfolio() {
-    if(this.namePortfolio==="portfolio"){
+    if(this.p===1){
+      this.p=2;
       this.namePortfolio="errazi oussama";
     }else{
-      this.namePortfolio="portfolio";
+      this.p=1;
+      this.namePortfolio="my portfolio";
     }
   }
 }
