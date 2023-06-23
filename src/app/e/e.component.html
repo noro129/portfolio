@@ -1,1 +1,23 @@
-<p>e works!</p>
+<div class="E" id="E">
+    <div class="Education" id="Education">
+        <div *ngFor="let edu of education">
+            <h1 class="field">{{ edu.field | titlecase }}</h1>
+            <p class="school">{{ edu.school | titlecase }}</p>
+            <p class="dateLocation">{{ edu.dateLocation }}</p>
+        </div>
+    </div>
+    <div class="Experience" id="Experience">
+        <div *ngFor="let exp of experience">
+            <h1 class="subject">{{ exp.subject | titlecase }}</h1>
+            <p class="date">{{ exp.date }}</p>
+            <p class="title">{{ exp.title | titlecase }}</p>
+            <p class="technologies">{{ exp.technologies }}</p>
+        </div>
+    </div>
+    <span class="back">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    
+</div>

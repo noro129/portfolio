@@ -33,7 +33,7 @@ div{
         opacity: 0.8;
 
         &>span{
-            background-color: var(--foreground-color2-light);
+            background-color: var(--foreground-color2);
         }
     }
 
@@ -70,7 +70,7 @@ div{
 
     .letterP{
         background-color: #00000070;
-        border: 3px solid var(--foreground-color1-light);
+        border: 3px solid var(--foreground-color1);
         z-index: 1;
         opacity: .7;
         color: var(--foreground-color2);
@@ -114,6 +114,5 @@ div{
         .letterP,.shadow{
             display: none;
         }
-        
     }
 }
