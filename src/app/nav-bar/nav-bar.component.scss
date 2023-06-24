@@ -10,6 +10,16 @@ nav{
     top: 0;
     left: 0;
 
+    img{
+        position: absolute;
+        right: 2vw;
+        top: 1vh;
+        width: 8vh;
+        min-width: 48px;
+        cursor: pointer;
+        display: none;
+    }
+
     >*{
         display: inline-block;
     }
@@ -105,6 +115,9 @@ nav{
     nav{
         ul{
             display: none;
+        }
+        img{
+            display: unset;
         }
     }
 }
