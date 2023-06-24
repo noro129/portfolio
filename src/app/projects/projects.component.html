@@ -1,0 +1,10 @@
+<div class="projectsPage">
+    <h1>My Projects</h1>
+    <div class="projectsContainer">
+        <div class="projectCard" *ngFor="let project of projects">
+            <a href="{{ project.link }}">
+            <h1 id="{{ project.description }}">{{ project.name | titlecase }}</h1>
+            <p>Tools : {{ project.tools }}</p></a>
+        </div>
+    </div>
+</div>

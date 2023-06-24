@@ -1,0 +1,160 @@
+.projectsPage{
+    padding-top: max( calc( 10vh + 80px ) , 140px );
+    position: relative;
+
+    &>h1{
+        color: var(--foreground-color2);
+        text-align: center;
+        font-size: max( 60px , 10vw);
+        font-weight: 100;
+        letter-spacing: 3px;
+        margin: 0 0 20px 0;
+    }
+
+    .projectsContainer{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 1%;
+        row-gap: 2%;
+
+        .projectCard{
+            width: 30vw;
+            min-width: 300px;
+            min-height: 300px;
+            border: 2px solid var(--foreground-color1);
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all .3s ease-in;
+            background: linear-gradient(45deg, var(--foreground-color2-alpha) , 1%,
+                var(--background-color1) , 95%,
+                var(--foreground-color2-alpha));
+            
+
+            &:hover{
+                scale: 1.05;
+
+                h1::before{
+                    width: 100%;
+                }
+                h1::after{
+                    left: -2%;
+                }
+                p{
+                    bottom: 2%;
+                }
+            }
+
+            h1,p{
+                position: absolute;
+                color: white;
+            }
+
+            a{
+                text-decoration: none;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50px;
+            }
+
+            h1{
+                left: 4%;
+                width: 96%;
+                height: min-content;
+                color: var(--foreground-color1);
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -2%;
+                    left: -4%;
+                    width: 0;
+                    height: 3px;
+                    background-color: var(--foreground-color1);
+                    transition: all .5s ease-in;
+                }
+
+                &::after{
+                    content: attr(id);
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 300;
+                    height: max-content;
+                    position: absolute;
+                    bottom: -2.5em;
+                    left: -100%;
+                    width: 97%;
+                    transition: all 1s ease-in;
+                }
+            }
+
+            p{
+                bottom : -10%;
+                left: 3%;
+                width: 97%;
+                transition: all .2s ease-in;
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+    .front-stars,.middle-stars,.far-stars{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        div{
+            position: absolute;
+            border-radius: 4px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #fff;
+        }
+        .type1{
+            animation-delay: 9s;
+        }
+        .type2{
+            animation-delay: 3s;
+        }
+    }
+    .front-stars{
+        div{
+            width: 4px;
+            height: 4px;
+            animation: 15s ease infinite anim;
+        }
+
+        @keyframes anim {
+            90%{
+                transform:translateY(-700px);
+                opacity: 0.2;
+            }
+            100%{
+                transform:translateY(-700px);
+                opacity:0;
+            }
+        }
+    }
+    .middle-stars{
+        div{
+            width: 3px;
+            height: 3px;
+            opacity: .8;
+            animation: 25s ease infinite anim;
+        }
+    }
+    .far-stars{
+        div{
+            width: 4px;
+            height: 4px;
+            opacity: .7;
+            animation: 20s ease infinite anim;
+        }
+    }
+}

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
-  navs=['HOME','E & E','ABOUT','PROJECTS','CONTACT','CV'];
+  navs=['HOME','E & E','PROJECTS','SCL','CONTACT','CV'];
 
   p=1;
   namePortfolio="my portfolio";

@@ -1,6 +1,6 @@
 .E{
     opacity: .9;
-    height: 100vh;
+    height: max(100vh , max-content);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
