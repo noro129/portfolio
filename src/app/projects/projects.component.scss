@@ -1,6 +1,7 @@
 .projectsPage{
     padding-top: max( calc( 10vh + 80px ) , 140px );
     position: relative;
+    overflow: hidden;
 
     &>h1{
         color: var(--foreground-color2);
@@ -103,4 +104,55 @@
             }
         }
     }
+
+    
+        
+        .front-stars,.middle-stars,.far-stars{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            &>div{
+                box-shadow: 0 0 10px var(--foreground-color1);
+                position: absolute;
+                border-radius: 10px;
+                background-color: var(--foreground-color1);
+            }
+            @keyframes anim2 {
+                90%{
+                    opacity: 0.5;
+                }
+                100%{
+                    transform:translateY(-150vh);
+                    opacity: 0;
+                }
+            }
+
+            .type2{
+                animation-delay: 10s;
+            }
+            .type3{
+                animation-delay: 25s;
+            }
+        }
+        .front-stars>div{
+            width: 4px;
+            height: 4px;
+            opacity: 0.8;
+            animation: 10s ease infinite anim2;
+        }
+        .middle-stars>div{
+            width: 3px;
+            height: 3px;
+            opacity: .4;
+            animation: 20s ease infinite anim2;
+        }
+        .far-stars>div{
+            width: 2px;
+            height: 2px;
+            opacity: .6;
+            animation: 30s ease infinite anim2;
+        }
 }
