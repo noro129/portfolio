@@ -130,29 +130,31 @@
                 }
             }
 
+            .type1{
+                animation: 15s ease infinite anim2;
+            }
             .type2{
-                animation-delay: 10s;
+                animation-delay: 25s;
+                animation: 20s ease infinite anim2;
             }
             .type3{
-                animation-delay: 25s;
+                animation-delay: 10s;
+                animation: 30s ease infinite anim2;
             }
         }
         .front-stars>div{
             width: 4px;
             height: 4px;
             opacity: 0.8;
-            animation: 10s ease infinite anim2;
         }
         .middle-stars>div{
             width: 3px;
             height: 3px;
             opacity: .4;
-            animation: 20s ease infinite anim2;
         }
         .far-stars>div{
             width: 2px;
             height: 2px;
             opacity: .6;
-            animation: 30s ease infinite anim2;
         }
 }

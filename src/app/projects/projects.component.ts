@@ -18,7 +18,7 @@ export class ProjectsComponent {
   numbers : number[];
 
   constructor(){
-    this.numbers= Array(100).fill(0).map((x,i)=>i);
+    this.numbers= Array(200).fill(0).map((x,i)=>i);
   }
 
   Rand() : number {
