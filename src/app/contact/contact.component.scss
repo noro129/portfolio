@@ -1,0 +1,51 @@
+.contactSection{
+    width: 100%;
+    height: max-content;
+    padding: 10px 0;
+    box-shadow: 0 20px 20px var(--background-color2) inset;
+    
+    .mainSection{
+        width: max-content;
+        margin: auto;
+        .logo{
+            margin: 5px;
+            width: max-content;
+            display: inline-block;
+            img{
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        
+    }
+    .contact{
+        text-align: center;
+        width: max-content;
+        height: 35px;
+        margin: 20px auto;
+        font-size: 30px;
+        color: var(--background-color1);
+        position: relative;
+        overflow: hidden;
+
+        &::after{
+            content: attr(id);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: var(--foreground-color1);
+            transform: translateX(100%);
+        }
+    }
+
+    .showContact{
+        
+        &::after{
+            transition: all .7s ease-in;
+            transform: translateX(0);
+        }
+    }
+}

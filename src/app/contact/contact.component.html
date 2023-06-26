@@ -1,0 +1,9 @@
+<div class="contactSection">
+    <div class="mainSection">
+        <div class="logo" (click)="GithubClicked()"><img alt="github logo" src="assets/github.png"/></div>
+        <div class="logo" (click)="EmailClicked()"><img alt="email logo" src="assets/email.png"/></div>
+        <div class="logo" (click)="PhoneClicked()"><img alt="phone logo" src="assets/phone.png"/></div>
+        <div class="logo" (click)="LinkedinClicked()"><img alt="linkedin logo" src="assets/linkedin.png"/></div>
+    </div>
+    <div class="contact" [ngClass]="showState ? 'showContact' : ''" id="{{ contact }}">{{ contact }}</div>
+</div>
