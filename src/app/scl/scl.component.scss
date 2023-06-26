@@ -3,8 +3,7 @@
     height: max-content;
     background-color: var(--background-color1);
     position: relative;
-    border: 1px solid var(--foreground-color2);
-    border-bottom: unset;
+    
 
     .before,.after{
         cursor: pointer;
@@ -29,6 +28,8 @@
         width: 80%;
         margin-left: 10%;
         height: max-content;
+        padding-top: 10px;
+        padding-bottom: 5px;
         position: relative;
         background: linear-gradient(90deg,#00000000,var(--background-color1),#00000000);
         display: flex;
@@ -36,6 +37,7 @@
         column-gap: max( 10% , 42px );
         justify-content: center;
         overflow-x: hidden;
+        border-top: 1px solid var(--foreground-color2);
 
         &::after{
             content: '';

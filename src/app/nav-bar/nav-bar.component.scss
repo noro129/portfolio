@@ -5,7 +5,7 @@ nav{
     background-color: var(--background-color1);
     border-bottom: 5px solid var(--foreground-color1);
     color: var(--foreground-color1);
-    position: absolute;
+    position: sticky;
     z-index: 2;
     top: 0;
     left: 0;
@@ -13,8 +13,8 @@ nav{
     img{
         position: absolute;
         right: 2%;
-        top: 1%;
-        width: 8%;
+        top: 2%;
+        width: 6%;
         min-width: 48px;
         cursor: pointer;
         display: none;
