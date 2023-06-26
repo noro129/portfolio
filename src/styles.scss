@@ -1,4 +1,5 @@
 :root{
+    //dark theme
     --background-color1: #000000;
     --background-color2: #171717;
 
@@ -7,13 +8,14 @@
     --foreground-color3: #52b788;
 
     --foreground-color2-alpha: #ec697c70;
+    --foreground-color1-alpha: #5fdfff70;
 }
 
 body,html{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: var(--background-color1);
 }

@@ -1,0 +1,43 @@
+<div class="sclSection">
+    <span class="before" (click)="before()">&lt;</span>
+    <div class="mainSection">
+        
+        <div class="element" [ngClass]="[beforeState ? 'moveLeft' :'' , afterState ? 'moveRight' : '']">
+            <h1>{{f}}</h1>
+            <div *ngFor="let fi of first">
+                <h2>{{ fi.key }} :</h2>&nbsp;
+                <h3>{{ fi.value }}</h3>
+            </div>
+        </div>
+        <div class="element inTheLeft" [ngClass]="[beforeState ? 'moveLeft' :'' , afterState ? 'moveRight' : '']">
+            <h1>{{s}}</h1>
+            <div *ngFor="let se of second">
+                <h2>{{ se.key }} :</h2>&nbsp;
+                <h3>{{ se.value }}</h3>
+            </div>
+        </div>
+        <div class="element" [ngClass]="[beforeState ? 'moveLeft' :'' , afterState ? 'moveRight' : '']">
+            <h1>{{t}}</h1>
+            <div *ngFor="let th of third">
+                <h2>{{ th.key }} :</h2>&nbsp;
+                <h3>{{ th.value }}</h3>
+            </div>
+        </div>
+        <div class="element inTheRight" [ngClass]="[beforeState ? 'moveLeft' :'' , afterState ? 'moveRight' : '']">
+            <h1>{{f}}</h1>
+            <div *ngFor="let fi of first">
+                <h2>{{ fi.key }} :</h2>&nbsp;
+                <h3>{{ fi.value }}</h3>
+            </div>
+        </div>
+        <div class="element" [ngClass]="[beforeState ? 'moveLeft' :'' , afterState ? 'moveRight' : '']">
+            <h1>{{s}}</h1>
+            <div *ngFor="let se of second">
+                <h2>{{ se.key }} :</h2>&nbsp;
+                <h3>{{ se.value }}</h3>
+            </div>
+        </div>
+        
+    </div>
+    <span class="after" (click)="after()">&gt;</span>
+</div>

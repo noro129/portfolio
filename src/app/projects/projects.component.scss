@@ -1,33 +1,35 @@
 .projectsPage{
-    padding-top: max( calc( 10vh + 80px ) , 140px );
+    // padding-top: max( calc( 10% + 80px ) , 140px );
     position: relative;
+    height: max-content;
     overflow: hidden;
 
     &>h1{
         color: var(--foreground-color2);
         text-align: center;
-        font-size: max( 60px , 10vw);
+        font-size: max( 60px , 10%);
         font-weight: 100;
         letter-spacing: 3px;
         margin: 0 0 20px 0;
     }
 
     .projectsContainer{
-        width: 100vw;
-        height: 100vh;
+        margin-bottom: 10px;
+        width: 100%;
+        height: max-content;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 1%;
-        row-gap: 2%;
 
         .projectCard{
-            width: 30vw;
+            width: 30%;
             min-width: 300px;
             min-height: 300px;
             border: 2px solid var(--foreground-color1);
             border-radius: 50px;
             position: relative;
+            margin-top: 10px;
             overflow: hidden;
             transition: all .3s ease-in;
             background: linear-gradient(45deg, var(--foreground-color2-alpha) , 1%,
@@ -88,7 +90,7 @@
                     font-weight: 300;
                     height: max-content;
                     position: absolute;
-                    bottom: -2.5em;
+                    bottom: -3em;
                     left: -100%;
                     width: 97%;
                     transition: all 1s ease-in;
@@ -96,10 +98,10 @@
             }
 
             p{
-                bottom : -10%;
+                bottom : -100%;
                 left: 3%;
                 width: 97%;
-                transition: all .2s ease-in;
+                transition: all 1s ease-in;
                 letter-spacing: 3px;
             }
         }
@@ -108,8 +110,8 @@
     
         
         .front-stars,.middle-stars,.far-stars{
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100rem;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -135,11 +137,11 @@
             }
             .type2{
                 animation-delay: 25s;
-                animation: 20s ease infinite anim2;
+                animation: 20s ease-in infinite anim2;
             }
             .type3{
                 animation-delay: 10s;
-                animation: 30s ease infinite anim2;
+                animation: 30s ease-in infinite anim2;
             }
         }
         .front-stars>div{

@@ -1,35 +1,32 @@
 div{
-    width: 98%;
-    height: max(90vh , 585px);
-    font-size: max( 60px , 10vw);
+    width: 100%;
+    height: max(100% , 590px);
+    font-size: max( 60px , 8vw);
     font-weight: 100;
-    background-color: #00000070;
     color: var(--foreground-color1);
     opacity: .9;
     text-shadow: 0 0 2px var(--background-color2);
-    margin: max( 60px , 10vh) 1% 0;
-    box-shadow: 0 0 10px #00000070;
     position: relative;
+    overflow: hidden;
 
     &::after{
         content: '';
         z-index: -1;
         position: absolute;
-        width: 100vw;
+        width: max( 60% , 100vh);
         height: 110%;
         top: -10%;
         left: -1%;
         background-color: var(--background-color2);
-        border-bottom-right-radius: 70%;
-        border-bottom-left-radius: 15%;
+        transform: rotateZ(10deg);
     }
 
     .title{
         font-weight: bold;
         width: 90%;
-        margin-top: 5vh;
+        margin-top: max( 12% , 70px );
         display: inline-block;
-        padding-left: 5vw;
+        padding-left: 5%;
         opacity: 0.8;
 
         &>span{
@@ -43,9 +40,9 @@ div{
         margin-top: 5%;
         display: block;
         font-size: 20px;
-        width: 40vw;
+        width: 40%;
         min-width: 220px;
-        margin-left: 10vw;
+        margin-left: 10%;
         font-style: italic;
         z-index: 0;
         padding: 5px;
@@ -69,8 +66,7 @@ div{
     }
 
     .letterP{
-        background-color: #00000070;
-        border: 3px solid var(--foreground-color1);
+        border: 2px solid var(--foreground-color1);
         z-index: 1;
         opacity: .7;
         color: var(--foreground-color2);
@@ -78,15 +74,15 @@ div{
         font-family: sans-serif;
         position: relative;
         display: inline-block;
-        transform: translateX(80vw) translateY(-20vh) rotateZ(45deg) translateY(-10vh) scale(2) translateX(-5vw);
+        transform: translateX(70vw) translateY(-20%) rotateZ(45deg) translateY(-10%) scale(2);
         animation: anim1 10s infinite;
 
         @keyframes anim1 {
             0%{
-                transform: translateX(80vw) translateY(-20vh) rotateZ(45deg) translateY(-10vh) scale(2) translateX(-5vw);
+                transform: translateX(70vw) translateY(-20%) rotateZ(45deg) translateY(-10%) scale(2);
             }
             50%{
-                transform: translateX(80vw) translateY(-20vh) rotateZ(45deg) translateY(-10vh) scale(2) translateX(-5vw) translateX(-20px) translateY(-20px);
+                transform: translateX(70vw) translateY(-20%) rotateZ(45deg) translateY(-10%) scale(2) translateX(-20px) translateY(-20px);
             }
         }
 
@@ -98,20 +94,11 @@ div{
             left: 5%;
         }
     }
-
-    .shadow{
-        transform: translateX(60vw) translateY(-20vh);
-        display: inline-block;
-        height: 0px;
-        width: 25%;
-        border-radius: 100%;
-        box-shadow: 0 0 50px 30px #000000f9;
-    }
 }
 
-@media (max-width: 430px){
+@media (max-width: 500px){
     div{
-        .letterP,.shadow{
+        .letterP{
             display: none;
         }
     }
