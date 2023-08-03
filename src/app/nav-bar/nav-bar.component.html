@@ -1,7 +1,15 @@
 <nav>
     <h1 (click)="SwitchNamePortfolio()" id="{{namePortfolio | titlecase}}">{{namePortfolio | titlecase}}</h1>
     <ul class="navItems">
-        <li *ngFor="let navItem of navs">{{ navItem }}</li>
+        <li *ngFor="let navItem of navs" class="{{navItem}}" (click)="showDiv(navItem)">{{ navItem }}</li>
     </ul>
-    <img alt="hamburgerIcon" src="assets/hamburgerIcon.png"/>
+    <ul class="navItems_smallerDevices" [ngClass]="show_nav ? 'showNavBar' : ''">
+        <li *ngFor="let navItem of navs" class="{{navItem}}" (click)="showDiv_hideNav(navItem)">{{ navItem }}</li>
+    </ul>
+    <img alt="hamburgerIcon" src="assets/hamburgerIcon.png" (click)="showNav()"/>
+    <span class="downloadCV" [ngClass]="showDownloadOption ? 'displayDownloadOption' : ''">
+    <button (click)="showDownload('X')">X</button>
+    <button (click)="showDownload('fr')">Frensh Version</button>
+    <button (click)="showDownload('en')">English Version</button>
+    </span>
 </nav>
