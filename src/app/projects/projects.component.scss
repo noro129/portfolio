@@ -10,7 +10,7 @@
         font-family: monospace;
         font-size: max( 70px , 10%);
         font-weight: bolder;
-        letter-spacing: 1px;
+        text-shadow: 0px 0px 6px var(--foreground-color2);
         margin: 0 0 20px 0;
     }
 
@@ -27,19 +27,16 @@
             width: 30%;
             min-width: 300px;
             min-height: 300px;
-            border: 2px solid var(--foreground-color1);
+            border: 1px solid var(--foreground-color1);
             border-radius: 50px;
             position: relative;
             margin-top: 10px;
+            background-color: var(--background-color2);
             overflow: hidden;
             transition: all .3s ease-in;
-            // background: linear-gradient(45deg, var(--foreground-color2-alpha) , 1%,
-            //     var(--background-color1) , 95%,
-            //     var(--foreground-color2-alpha));
             
 
             &:hover{
-                // scale: 1.05;
 
                 h1::before{
                     width: 100%;
@@ -74,13 +71,14 @@
                 font-size: 25px;
                 height: min-content;
                 margin: 10px 0 0 0;
-                font-weight: lighter;
-                color: var(--foreground-color1);
+                font-weight: bolder;
+                color: var(--foreground-color2);
+                opacity: .9;
 
                 &::before{
                     content: '';
                     position: absolute;
-                    bottom: -2%;
+                    bottom: -3px;
                     left: -4%;
                     width: 0;
                     height: 3px;

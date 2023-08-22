@@ -58,7 +58,7 @@
             text-align: center;
             border: 3px solid var(--foreground-color2);
             border-radius: 5px;
-            box-shadow: 7px 7px 5px var(--foreground-color2-alpha);
+            box-shadow: 6px 6px 8px var(--foreground-color2-alpha);
             text-align: left;
             padding-left: 10px;
             padding-bottom: 15px;
@@ -78,7 +78,7 @@
                 color: var(--foreground-color2);
             }
             div>h3{
-                color: white;
+                color: var(--foreground-color1);
                 font-weight: lighter;
             }
         }

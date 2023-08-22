@@ -12,14 +12,13 @@ export class EComponent {
 
   education : Education[] =[ 
     {
-      field : "Mathematics and Physics",
-      school : "Preparatory Classes for Engineering Schools Reda Slaoui (CPGE)",
-      dateLocation : "Sep 2019 – Jun 2021 | Agadir, Morocco"
-    },
-    {
       field : "Software engineering student",
       school : "National School of Computer Science and Systems Analysis (ENSIAS)",
       dateLocation : "Sep 2021 – present | Rabat, Morocco"
+    },{
+      field : "Mathematics and Physics",
+      school : "Preparatory Classes for Engineering Schools Reda Slaoui (CPGE)",
+      dateLocation : "Sep 2019 – Jun 2021 | Agadir, Morocco"
     }
   ];
 

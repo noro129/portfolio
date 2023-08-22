@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class NavBarComponent {
 
 
-  navs=['HOME','2E','PROJECTS','SCL','CONTACT','CV','A GAME'];
+  navs=['HOME','2E','PROJECTS','SCL','CONTACT','CV'];
   show_nav = false;
   showDownloadOption = false;
   p=1;
@@ -33,8 +33,7 @@ export class NavBarComponent {
 
   showDiv(item : string){
     if(item=="CV"){
-      this.showDownloadOption=true;
-    }else if(item=="A GAME"){
+      this.showDownloadOption=!this.showDownloadOption;
     }else{
     }
   }

@@ -111,13 +111,13 @@ nav{
                 transform: translateY(-10px);
                 color: var(--background-color1);
                 background-color: var(--foreground-color1);
-                border: 2px solid var(--foreground-color1);
+                border: 2px solid var(--foreground-color2);
                 transition: all .1s ease;
                 &::after,&::before{
                     content: unset;
                 }
                 &:hover{
-                    box-shadow: 0 0 10px 4px var(--foreground-color1);
+                    box-shadow: 0 0 10px 4px var(--foreground-color2);
                 }
             }
         }
@@ -172,6 +172,9 @@ nav{
         right: 0;
         z-index: 2;
         display: none;
+        opacity: 0;
+        transform: translateY(-10px) translateX(-2px);
+        transition: all .2s ease;
 
         button{
             background-color: var(--background-color1);
@@ -205,6 +208,8 @@ nav{
 
     }
     .displayDownloadOption{
+        opacity: 1;
+        transform: translateY(10px) translateX(-2px);
         display: block;
     }
 }
