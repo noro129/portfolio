@@ -27,6 +27,7 @@ div{
         margin-top: max( 4% , 24px );
         display: inline-block;
         padding-left: 5%;
+        animation: anim3 1s forwards;
         // opacity: 0.8;
 
         &>span{
@@ -48,6 +49,8 @@ div{
         z-index: 0;
         padding: 5px;
         position: relative;
+        opacity: 0;
+        animation: anim3 1s 1s forwards;
 
         a{
             font-size: 24px;
@@ -64,6 +67,8 @@ div{
             left: -7%;
             background-color: var(--foreground-color2);
             border: 3px solid var(--foreground-color1);
+            opacity: 0;
+            animation: anim4 1s 1.5s forwards;
         }
     }
 
@@ -76,7 +81,7 @@ div{
         position: relative;
         display: inline-block;
         transform: translateX(70vw) translateY(-20%) rotateZ(45deg) translateY(-10%) scale(4) translateX(-20px) translateY(-20px);
-        animation: anim1 10s infinite;
+        animation: anim1 10s infinite,anim2 3s forwards;
 
         @keyframes anim1 {
             0%{
@@ -101,6 +106,38 @@ div{
         position: absolute;
         width: 50%;
         transform: translateX(40vw) translateY(-50vh) rotateZ(45deg);
+    }
+
+    @keyframes anim2 {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
+
+    @keyframes anim3 {
+        0%{
+            transform: translateX(-20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes anim4 {
+        0%{
+            width: 0;
+            opacity: 0;
+        }
+        100%{
+            width: 100%;
+            opacity: 1;
+        }
     }
 }
 

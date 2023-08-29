@@ -9,6 +9,16 @@ nav{
     z-index: 2;
     top: 0;
     left: 0;
+    animation: anim1 1s forwards;
+
+    @keyframes anim1 {
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
 
     img{
         position: absolute;
@@ -29,6 +39,8 @@ nav{
         font-size: 40px;
         cursor: pointer;
         position: relative;
+        opacity: 0;
+        animation: anim2 .5s 1s forwards;
         &::after{
             content: attr(id);
             position: absolute;
@@ -46,6 +58,15 @@ nav{
             &::after{
                 transform: translate(-4px,-4px);
             }
+        }
+    }
+
+    @keyframes anim2 {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
         }
     }
 
