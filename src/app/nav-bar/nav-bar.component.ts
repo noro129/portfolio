@@ -35,6 +35,7 @@ export class NavBarComponent {
     if(item=="CV"){
       this.showDownloadOption=!this.showDownloadOption;
     }else{
+      document.getElementById(item)?.scrollIntoView({behavior:'smooth'});
     }
   }
 
