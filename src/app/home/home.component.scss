@@ -28,7 +28,8 @@ div{
         display: inline-block;
         padding-left: 5%;
         animation: anim3 1s forwards;
-        // opacity: 0.8;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-fill-color: var(--background-color2);
 
         &>span{
             background-color: var(--foreground-color1-alpha);

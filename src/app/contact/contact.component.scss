@@ -20,7 +20,11 @@
             margin: 0 auto;
             padding: 0;
             color: var(--foreground-color1);
-            
+            transition: all .5s ease;
+
+            &:hover{
+                transform: rotateY(180deg);
+            }
         }
     }
     .title>div{
@@ -47,11 +51,25 @@
                 display: block;
                 padding-bottom: 10px;
                 border-bottom: 3px solid var(--foreground-color1);
+
+                &:hover + p{
+                    animation-name: anim2;
+                }
             }
             p{
                 font-size: 20px;
                 text-align: center;
                 color: var(--foreground-color1);
+                opacity: 1;
+                animation-duration: .2s;
+                animation-fill-mode: forwards;
+                
+            }
+
+            @keyframes anim2 {
+                100%{
+                    text-shadow: 0px 0px 2px var(--foreground-color1);
+                }
                 
             }
         }

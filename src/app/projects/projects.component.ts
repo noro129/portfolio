@@ -36,7 +36,7 @@ export class ProjectsComponent {
   projects : Project[] = [
       {
           "name":"NuMa Game",
-          "description":"aaaaaaaaa aaaaaaaaaaaa a a aa  a aaaaa a aaaa aaaa ",
+          "description":"Android game for math lovers",
           "tools":"Android Studio and Java",
           "link":"#"
       },
@@ -54,7 +54,7 @@ export class ProjectsComponent {
       },
       {
           "name":"Mobile application for managing ENSIAS club events",
-          "description":"aaaaaaaaa aaaaaaaaaaaa a a aa  a aaaaa a aaaa aaaa ",
+          "description":"Android app for ENSIAS clubs to create & manage their events",
           "tools":"Android Studio, Firebase and Java",
           "link":"#"
       }

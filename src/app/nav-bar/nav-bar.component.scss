@@ -123,6 +123,7 @@ nav{
                 }
             }
             &:last-of-type{
+                margin-left: 50px;
                 margin-bottom: -10px;
                 font-family: sans-serif;
                 font-weight: bolder;
@@ -132,13 +133,13 @@ nav{
                 transform: translateY(-10px);
                 color: var(--background-color1);
                 background-color: var(--foreground-color1);
-                border: 2px solid var(--foreground-color2);
-                transition: all .1s ease;
+                transition: all .4s ease;
+                box-shadow: 0 0 5px 2px var(--foreground-color1);
                 &::after,&::before{
                     content: unset;
                 }
                 &:hover{
-                    box-shadow: 0 0 10px 4px var(--foreground-color2);
+                    box-shadow: unset;
                 }
             }
         }

@@ -9,13 +9,15 @@
         cursor: pointer;
         z-index: 1;
         position: absolute;
-        top: 50%;
+        // top: 50%;
+        bottom: 10%;
         height: max-content;
         font-size: 40px;
         font-weight: bolder;
         font-family: monospace;
         color: var(--foreground-color1);
         box-shadow: 0 0 10px var(--foreground-color1-alpha);
+        border-radius: 10px;
         padding: 0 10px;
     }
     .before{
@@ -37,7 +39,7 @@
         column-gap: max( 10% , 42px );
         justify-content: center;
         overflow-x: hidden;
-        border-top: 1px solid var(--foreground-color2);
+        border-top: 1px solid var(--foreground-color1);
 
         &::after{
             content: '';
