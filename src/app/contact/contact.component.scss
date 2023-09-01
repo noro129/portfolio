@@ -14,6 +14,7 @@
         flex-wrap: wrap;
 
         >h1{
+            cursor: default;
             font-size: 20px;
             display: inline-block;
             text-align: center;
@@ -76,22 +77,22 @@
 
         
     }
-    .contact{
-        text-align: center;
-        width: max-content;
-        height: 35px;
-        margin: 20px auto;
-        font-size: 30px;
-        color: var(--background-color1);
-        position: relative;
+    // .contact{
+    //     text-align: center;
+    //     width: max-content;
+    //     height: 35px;
+    //     margin: 20px auto;
+    //     font-size: 30px;
+    //     color: var(--background-color1);
+    //     position: relative;
 
-        &::after{
-            content: attr(id);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            color: var(--foreground-color1);
-        }
-    }
+    //     &::after{
+    //         content: attr(id);
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         color: var(--foreground-color1);
+    //     }
+    // }
 }

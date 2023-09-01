@@ -116,8 +116,7 @@ nav{
                 left: 0px;
                 transition: all .2s ease-in;
             }
-            &:hover{
-                transform: rotate(3deg);
+            &:not(:last-child):hover{
                 &::after{
                     transform: translate(-8px,-8px);
                 }
@@ -134,12 +133,43 @@ nav{
                 color: var(--background-color1);
                 background-color: var(--foreground-color1);
                 transition: all .4s ease;
-                box-shadow: 0 0 5px 2px var(--foreground-color1);
-                &::after,&::before{
+                overflow: hidden;
+                
+                &::before{
                     content: unset;
                 }
+                &::after{
+                    content: '';
+                    transition: all .4s linear;
+                    width: 0%;
+                    height: 1%;
+                    background-color: var(--foreground-color1);
+                    top: -5%;
+                    left: 50%;
+                    border-radius: 10px;
+                    z-index: 1;
+                    overflow: 0;
+                    box-shadow: 0 5px 5px var(--background-color1);
+                }
+                &::before{
+                    content: '';
+                    transition: all .4s linear;
+                    width: 0%;
+                    height: 1%;
+                    background-color: var(--foreground-color1);
+                    bottom: -5%;
+                    top: unset;
+                    left: 50%;
+                    border-radius: 10px;
+                    z-index: 1;
+                    overflow: 0;
+                    box-shadow: 0 -5px 5px var(--background-color1);
+                }
                 &:hover{
-                    box-shadow: unset;
+                    &::after,&::before{
+                        left: 0%;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -148,11 +178,10 @@ nav{
     .navItems_smallerDevices{
         margin: 0;
         position: absolute;
-        width: 5%;
-        min-width: 15ch;
+        min-width: 20ch;
         height: max-content;
-        padding: 10px;
-        top: max( 10% , 60px );
+        padding: 10px 0;
+        top: max( calc( 10% + 10px ) , 70px );
         right: 0;
         background-color: var(--background-color1);
         border-bottom: 2px solid var(--foreground-color1);
@@ -160,18 +189,20 @@ nav{
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         opacity: 0;
-        transition: all .5s ease;
+        transition: all .2s ease;
 
         li{
             cursor: pointer;
             list-style: none;
-            margin: 10px 0;
+            margin: 2px 0;
             text-align: center;
             width: 100%;
             font-size: 20px;
             font-weight: 100;
+            padding: 5px 0;
             transform: translateX(100%);
-            transition: all .7s ease-out;
+            transition: all .4s .2s ease-out;
+            background-color: #ffffff07;
         }
     }
 

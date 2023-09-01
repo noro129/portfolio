@@ -40,11 +40,9 @@ export class NavBarComponent {
   }
 
   showDiv_hideNav(item : string){
-    if(item=="CV"){
-      this.showDownloadOption=true;
-    }
     this.showNav();
-    this.showDiv(item);
+    setTimeout(() => {this.showDiv(item)},200);
+    
   }
 
   showDownload(clickedButton : string){
