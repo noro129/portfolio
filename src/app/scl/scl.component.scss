@@ -16,9 +16,15 @@
         font-weight: bolder;
         font-family: monospace;
         color: var(--foreground-color1);
-        box-shadow: 0 0 10px var(--foreground-color1-alpha);
+        box-shadow: 4px 4px 1px var(--foreground-color1);
         border-radius: 10px;
+        border: 1px solid var(--foreground-color1);
         padding: 0 10px;
+        transition: all .1s ease;
+
+        &:hover{
+            background-color: var(--foreground-color1-alpha);
+        }
     }
     .before{
         left: 10%;

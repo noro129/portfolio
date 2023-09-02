@@ -52,6 +52,7 @@
                 display: block;
                 padding-bottom: 10px;
                 border-bottom: 3px solid var(--foreground-color1);
+                transition: all .5s ease-in-out;
 
                 &:hover + p{
                     animation-name: anim2;
@@ -77,22 +78,4 @@
 
         
     }
-    // .contact{
-    //     text-align: center;
-    //     width: max-content;
-    //     height: 35px;
-    //     margin: 20px auto;
-    //     font-size: 30px;
-    //     color: var(--background-color1);
-    //     position: relative;
-
-    //     &::after{
-    //         content: attr(id);
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         color: var(--foreground-color1);
-    //     }
-    // }
 }
