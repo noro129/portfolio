@@ -5,8 +5,22 @@
     box-shadow: 0 1px 1px var(--foreground-color1) inset;
     position: relative;
 
+    &::after{
+        content: 'CONTACT';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: max-content;
+        height: 100%;
+        font-size: 10vw;
+        opacity: .3;
+        color: var(--foreground-color1);
+    }
+
     .title,.title>div{
         position: absolute;
+        z-index: 3;
         display: flex;
         margin: 0 0 5px 5px;
         padding: 0;
@@ -40,6 +54,8 @@
         margin: auto;
         display: flex;
         flex-wrap: wrap;
+        position: absolute;
+        z-index: 2;
         justify-content: center;
         .logo{
             width: 30ch;

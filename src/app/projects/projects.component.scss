@@ -33,16 +33,34 @@
             margin-top: 10px;
             background-color: var(--background-color2);
             overflow: hidden;
-            transition: all .3s ease-in;
+            transition: transform 1s ease-in;
+
+            &>img{
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all 1.5s ease;
+                object-fit: fill;
+            }
             
 
             &:hover{
+                opacity: 1;
+                transform: scale(1.05);
+
+                img{
+                    opacity: .3;
+                }
 
                 h1::before{
-                    width: 100%;
+                    transform: translateX(0%);
                 }
                 h1::after{
-                    left: -2%;
+                    opacity: 1;
                 }
                 p{
                     bottom: 2%;
@@ -80,10 +98,11 @@
                     position: absolute;
                     bottom: -3px;
                     left: -4%;
-                    width: 0;
+                    width: 100%;
                     height: 3px;
                     background-color: var(--foreground-color1);
-                    transition: all .5s ease-in;
+                    transform: translateX(-100%);
+                    transition: transform .5s ease-in;
                 }
 
                 &::after{
@@ -91,16 +110,18 @@
                     color: white;
                     font-size: 30px;
                     font-weight: 300;
+                    font-family: sans-serif;
                     position: absolute;
-                    transform: translateY(2ch);
-                    left: -100%;
+                    transform: translateY(calc( 2ch + 5px ));
+                    left: 0%;
+                    opacity: 0;
                     width: 97%;
                     transition: all 1s ease-in;
                 }
             }
 
             p{
-                bottom : -100%;
+                bottom : -50%;
                 left: 3%;
                 width: 97%;
                 transition: all 1s ease-in;

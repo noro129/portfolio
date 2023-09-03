@@ -64,9 +64,9 @@
             height: max-content;
             min-width: max( 50% , 210px);
             text-align: center;
-            border: 3px solid var(--foreground-color2);
+            border: 1px solid var(--foreground-color1);
             border-radius: 5px;
-            box-shadow: 6px 6px 8px var(--foreground-color2-alpha);
+            box-shadow: 6px 6px 1px var(--foreground-color1);
             text-align: left;
             padding-left: 10px;
             padding-bottom: 15px;
