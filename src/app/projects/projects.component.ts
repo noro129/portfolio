@@ -37,7 +37,7 @@ export class ProjectsComponent {
   projects : Project[] = [
       {
           "name":"NuMa Game",
-          "description":"Android game for math lovers",
+          "description":"A simple android game for math lovers",
           "tools":"Android Studio and Java",
           "link":"https://github.com/noro129/NuMa-Game",
           "image":"/assets/numa.jpeg"
