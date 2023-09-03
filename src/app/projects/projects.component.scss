@@ -21,19 +21,20 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        column-gap: 1%;
+        column-gap: 2%;
 
         .projectCard{
-            width: 30%;
+            // width: 30%;
+            width: 25%;
             min-width: 300px;
-            min-height: 300px;
+            min-height: 400px;
             border: 1px solid var(--foreground-color1);
-            border-radius: 50px;
+            // border-radius: 50px;
             position: relative;
             margin-top: 10px;
             background-color: var(--background-color2);
             overflow: hidden;
-            transition: transform 1s ease-in;
+            transition: transform .5s ease-in;
 
             &>img{
                 z-index: -1;
@@ -49,7 +50,6 @@
             
 
             &:hover{
-                opacity: 1;
                 transform: scale(1.05);
 
                 img{
@@ -65,32 +65,50 @@
                 p{
                     bottom: 2%;
                 }
+                a>button{
+                    opacity: 1;
+                }
             }
 
             h1,p{
                 position: absolute;
-                color: white;
+                color: var(--foreground-color1);
             }
 
             a{
+                button{
+                    font-size: 18px;
+                    font-weight: bolder;
+                    height: 40px;
+                    width: 100px;
+                    color: var(--foreground-color1);
+                    background-color: var(--background-color2);
+                    cursor: pointer;
+                    border: 1px solid var(--foreground-color1);
+                    opacity: 0;
+                    transition: opacity .3s ease-in-out;
+
+                    &:hover{
+                        background-color: #1f1f1f;
+                    }
+                }
+                z-index: 2;
                 text-decoration: none;
-                height: 100%;
-                width: 100%;
                 position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: 50px;
+                bottom: 10px ;
+                right: 10px;
             }
 
             h1{
+                font-family: sans-serif;
                 position: relative;
                 left: 4%;
                 width: 96%;
-                font-size: 25px;
+                font-size: 30px;
+                text-shadow: 0px 0px 2px var(--foreground-color1);
                 height: min-content;
                 margin: 10px 0 0 0;
                 font-weight: bolder;
-                color: var(--foreground-color2);
                 opacity: .9;
 
                 &::before{
@@ -107,12 +125,13 @@
 
                 &::after{
                     content: attr(id);
-                    color: white;
-                    font-size: 30px;
+                    text-shadow: none;
+                    color: var(--foreground-color1);
+                    font-size: 28px;
                     font-weight: 300;
                     font-family: sans-serif;
                     position: absolute;
-                    transform: translateY(calc( 2ch + 5px ));
+                    transform: translateY(calc( 2ch + 10px ));
                     left: 0%;
                     opacity: 0;
                     width: 97%;
@@ -123,7 +142,7 @@
             p{
                 bottom : -50%;
                 left: 3%;
-                width: 97%;
+                width: calc( 97% - 110px );
                 transition: all 1s ease-in;
                 letter-spacing: 3px;
             }

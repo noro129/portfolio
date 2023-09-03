@@ -13,10 +13,9 @@
     <div class="projectsContainer">
         <div class="projectCard" *ngFor="let project of projects">
             <img src="{{ project.image }}" alt="background"/>
-            <a href="{{ project.link }}" target="_blank">
-                <h1 id="{{ project.description }}">{{ project.name | titlecase }}</h1>
-                <p>Tools : {{ project.tools }}</p>
-            </a>
+            <a href="{{ project.link }}" target="_blank"><button>Click Me</button></a>
+            <h1 id="{{ project.description }}">{{ project.name | titlecase }}</h1>
+            <p>Tools : {{ project.tools }}</p>
         </div>
     </div>
 </div>
