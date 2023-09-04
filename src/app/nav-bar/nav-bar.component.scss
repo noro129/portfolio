@@ -5,11 +5,12 @@ nav{
     background-color: var(--background-color1);
     border-bottom: 2px solid var(--foreground-color1);
     color: var(--foreground-color1);
-    position: sticky;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
     animation: anim1 1s forwards;
+    opacity: .9;
 
     @keyframes anim1 {
         0%{
