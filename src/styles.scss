@@ -1,18 +1,14 @@
 :root{
     //option1 Dark Mode
-    --background-color1: #101015;
-    --background-color2: #121212;
+    --background-color1: #121212;
+    --background-color2: #101015;
     
     --foreground-color1: #fcfcfc;
-    --foreground-color2: #00e5ff;
-    --foreground-color2: #33827A;
+    --foreground-color2: #c67d61;
 
     --foreground-color1-alpha: #fcfcfc70;
     --foreground-color1-alpha2: #fcfcfc0f;
-    --foreground-color2-alpha: #33827A70;
-    
-    /////////////////////////////////////////////////////////////
-    //option2 Dark Mode
+    --foreground-color2-alpha: #c67d6170;
 }
 
 body,html{

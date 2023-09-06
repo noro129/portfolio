@@ -14,13 +14,12 @@
         width: max-content;
         height: 100%;
         font-size: 10vw;
-        opacity: .3;
-        color: var(--foreground-color1);
+        opacity: .5;
+        color: var(--foreground-color2-alpha);
     }
 
     .title,.title>div{
         position: absolute;
-        z-index: 3;
         display: flex;
         margin: 0 0 5px 5px;
         padding: 0;
