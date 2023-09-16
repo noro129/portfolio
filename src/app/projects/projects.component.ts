@@ -16,24 +16,6 @@ interface Project {
 
 export class ProjectsComponent {
 
-  numbers : number[];
-
-  constructor(){
-    this.numbers= Array(300).fill(0).map((x,i)=>i);
-  }
-
-  Rand() : number {
-    return Math.floor(Math.random()*3)+1;
-  }
-
-  Random() : number {
-    return Math.floor(Math.random()*100)+1;
-  }
-
-  RandomNeg() : number {
-    return (-1)*Math.floor(Math.random()*500)-1;
-  }
-
   projects : Project[] = [
       {
           "name":"NuMa Game",
